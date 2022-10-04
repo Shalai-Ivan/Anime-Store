@@ -9,9 +9,40 @@ import AVKit
 import UIKit
 
 class RegistrationViewController: UIViewController {
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var loginTextField: UITextField!
+    @IBOutlet private weak var registrationStackView: UIStackView!
+    @IBOutlet private weak var signStackView: UIStackView!
+    var isKeyboardAppear = false
+    deinit {
+        removeObservers()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         playBackgroundVideo()
+        interfaceSettings()
+        registerForKeyboardNotification()
+    }
+    private func interfaceSettings() {
+        loginTextField.backgroundColor = UIColor(white: 0, alpha: 0.3)
+        passwordTextField.backgroundColor = UIColor(white: 0, alpha: 0.3)
+    }
+    private func registerForKeyboardNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(showKeyboard(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hideKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @objc private func showKeyboard(notification: Notification) {
+        guard let kbFrameSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        if self.view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= kbFrameSize.height / 2
+        }
+    }
+    @objc private func hideKeyboard() {
+        self.view.frame.origin.y = .zero
     }
     @objc private func repeatVideo(notification: Notification) {
         let playerItem = notification.object as? AVPlayerItem
@@ -29,5 +60,13 @@ class RegistrationViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(repeatVideo(notification:)), name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
         player.play()
     }
+    @IBAction func tapViewGestureRecognizer(_ sender: Any) {
+        view.endEditing(true)
+    }
 }
 
+extension RegistrationViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
