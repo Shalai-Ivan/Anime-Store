@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="Anime_Store" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-CK-9pw">
+                                <rect key="frame" x="63" y="588" width="288" height="86"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="H9b-yK-4kj">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="38"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" systemColor="systemGray3Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="y6b-LU-Uu0"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="HQs-qQ-0Ob">
+                                        <rect key="frame" x="0.0" y="48" width="288" height="38"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" systemColor="systemGray3Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="YKl-K9-D7l"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dpE-Dp-FJA">
+                                <rect key="frame" x="87" y="694" width="240" height="152.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2s-Yg-4Nt">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="39.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign in">
+                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FQI-5w-7Zz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5g-bN-5Al">
+                                        <rect key="frame" x="0.0" y="44.5" width="240" height="28.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign up">
+                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapSignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LjT-G0-O8J"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-iy-wb3">
+                                        <rect key="frame" x="0.0" y="78" width="240" height="39.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Register">
+                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2u-95-6uv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-Aw-KgR">
+                                        <rect key="frame" x="0.0" y="122.5" width="240" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapCancelRegistrationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ozU-57-XhC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bcq-Aw-KgR" firstAttribute="height" secondItem="A5g-bN-5Al" secondAttribute="height" multiplier="1.05263" id="W8g-G4-3bZ"/>
+                                    <constraint firstItem="6dN-iy-wb3" firstAttribute="height" secondItem="c2s-Yg-4Nt" secondAttribute="height" id="xW5-xe-v2P"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JHn-26-w6o">
+                                <rect key="frame" x="63" y="301" width="288" height="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemGray3Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fzd-Sb-eDq"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XlI-bE-eCC">
+                                <rect key="frame" x="63" y="349" width="288" height="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemGray3Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="60r-pv-h5f"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-af-yjF">
+                                <rect key="frame" x="63" y="205" width="288" height="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemGray3Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iwu-RQ-Cmd"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-nO-u8H">
+                                <rect key="frame" x="63" y="397" width="288" height="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemGray3Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FSM-H5-AgZ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DGG-08-ftw">
+                                <rect key="frame" x="63" y="445" width="288" height="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemGray3Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1gr-xK-vt1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="telephone number" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZAM-bE-rx0">
+                                <rect key="frame" x="63" y="493" width="288" height="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemGray3Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ynv-6u-dmq"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="surname" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YIv-Dc-r1X">
+                                <rect key="frame" x="63" y="253" width="288" height="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemGray3Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="51F-Ys-Wy8"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g8s-yD-hiu"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="A5g-bN-5Al" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.031808" id="1hu-6s-aP6"/>
+                            <constraint firstItem="UqJ-af-yjF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.695652" id="1w0-T7-Drw"/>
+                            <constraint firstItem="dpE-Dp-FJA" firstAttribute="centerY" secondItem="g8s-yD-hiu" secondAttribute="centerY" multiplier="1.7" id="6Vd-PF-1sC"/>
+                            <constraint firstItem="YIv-Dc-r1X" firstAttribute="top" secondItem="UqJ-af-yjF" secondAttribute="bottom" constant="10" id="74b-Ts-iIz"/>
+                            <constraint firstItem="DGG-08-ftw" firstAttribute="top" secondItem="Doo-nO-u8H" secondAttribute="bottom" constant="10" id="7yp-Rd-0qB"/>
+                            <constraint firstItem="ZAM-bE-rx0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="750" id="8Fv-oD-YkB"/>
+                            <constraint firstItem="ycg-CK-9pw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.695652" id="9ik-nn-eEQ"/>
+                            <constraint firstItem="UqJ-af-yjF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0424107" id="DFM-h0-FYa"/>
+                            <constraint firstItem="ycg-CK-9pw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0959821" id="DNO-ML-1q5"/>
+                            <constraint firstItem="Doo-nO-u8H" firstAttribute="top" secondItem="XlI-bE-eCC" secondAttribute="bottom" constant="10" id="EOb-fs-2To"/>
+                            <constraint firstItem="DGG-08-ftw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="750" id="EiH-oe-3sS"/>
+                            <constraint firstItem="ZAM-bE-rx0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0424107" id="JOa-Ic-H5F"/>
+                            <constraint firstItem="YIv-Dc-r1X" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.695652" id="Jzd-Ps-BCr"/>
+                            <constraint firstItem="XlI-bE-eCC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0424107" id="K1u-nx-vbc"/>
+                            <constraint firstItem="DGG-08-ftw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.695652" id="KBT-yn-j9T"/>
+                            <constraint firstItem="DGG-08-ftw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0424107" id="O1h-W7-BLr"/>
+                            <constraint firstItem="Doo-nO-u8H" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.695652" id="PYH-y5-0Md"/>
+                            <constraint firstItem="Doo-nO-u8H" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0424107" id="Suv-EY-sQX"/>
+                            <constraint firstItem="XlI-bE-eCC" firstAttribute="top" secondItem="JHn-26-w6o" secondAttribute="bottom" constant="10" id="YYO-k3-14C"/>
+                            <constraint firstItem="JHn-26-w6o" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.695652" id="azJ-qw-QJV"/>
+                            <constraint firstItem="XlI-bE-eCC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.695652" id="bLK-mO-Hn0"/>
+                            <constraint firstItem="dpE-Dp-FJA" firstAttribute="centerX" secondItem="g8s-yD-hiu" secondAttribute="centerX" id="chg-eb-ob8"/>
+                            <constraint firstItem="dpE-Dp-FJA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="k2I-MS-rec"/>
+                            <constraint firstItem="Doo-nO-u8H" firstAttribute="centerX" secondItem="g8s-yD-hiu" secondAttribute="centerX" priority="750" id="kPv-DY-c4o"/>
+                            <constraint firstItem="JHn-26-w6o" firstAttribute="top" secondItem="YIv-Dc-r1X" secondAttribute="bottom" constant="10" id="kXu-zY-THt"/>
+                            <constraint firstItem="ycg-CK-9pw" firstAttribute="centerX" secondItem="g8s-yD-hiu" secondAttribute="centerX" priority="750" id="lzg-nm-cby"/>
+                            <constraint firstItem="c2s-Yg-4Nt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0440848" id="mJ1-bQ-h7L"/>
+                            <constraint firstItem="ZAM-bE-rx0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.695652" id="mn7-bd-xpe"/>
+                            <constraint firstItem="JHn-26-w6o" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0424107" id="mqZ-vU-QAQ"/>
+                            <constraint firstItem="YIv-Dc-r1X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="750" id="mwC-em-P6Y"/>
+                            <constraint firstItem="YIv-Dc-r1X" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0424107" id="nKh-Jp-x19"/>
+                            <constraint firstItem="dpE-Dp-FJA" firstAttribute="top" secondItem="ycg-CK-9pw" secondAttribute="bottom" priority="750" constant="20" id="pxR-Kc-S04"/>
+                            <constraint firstItem="JHn-26-w6o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="750" id="quU-Sm-HhE"/>
+                            <constraint firstItem="UqJ-af-yjF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="750" id="r1r-8n-8r3"/>
+                            <constraint firstItem="UqJ-af-yjF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="uQh-Tp-JId"/>
+                            <constraint firstItem="ZAM-bE-rx0" firstAttribute="top" secondItem="DGG-08-ftw" secondAttribute="bottom" constant="10" id="vAP-5v-5Ue"/>
+                            <constraint firstItem="XlI-bE-eCC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="750" id="vpN-J5-FiI"/>
+                            <constraint firstItem="ZAM-bE-rx0" firstAttribute="top" secondItem="DGG-08-ftw" secondAttribute="bottom" constant="10" id="zE7-YR-h2E"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hOq-i6-RTY" appends="YES" id="aOH-yy-uQB"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="bcq-Aw-KgR" id="ucM-6T-fDN"/>
+                        <outlet property="emailTextField" destination="DGG-08-ftw" id="7Yd-7x-yL3"/>
+                        <outlet property="loginRegistrationTextField" destination="JHn-26-w6o" id="CAJ-Sj-eXw"/>
+                        <outlet property="loginTextField" destination="H9b-yK-4kj" id="sI1-ap-eal"/>
+                        <outlet property="nameTextField" destination="UqJ-af-yjF" id="1nY-1B-bYX"/>
+                        <outlet property="passwordRegistrationTextField" destination="XlI-bE-eCC" id="Wpc-If-M4e"/>
+                        <outlet property="passwordTextField" destination="HQs-qQ-0Ob" id="bBd-dV-ARN"/>
+                        <outlet property="registerButton" destination="6dN-iy-wb3" id="DU7-cl-tXT"/>
+                        <outlet property="registrationStackView" destination="ycg-CK-9pw" id="gHO-f7-cZI"/>
+                        <outlet property="repeatPasswordRegistrationTextField" destination="Doo-nO-u8H" id="hhV-AV-EnL"/>
+                        <outlet property="signInButton" destination="c2s-Yg-4Nt" id="sby-AS-1fK"/>
+                        <outlet property="signStackView" destination="dpE-Dp-FJA" id="EGz-1Z-0hb"/>
+                        <outlet property="signUpButton" destination="A5g-bN-5Al" id="8Ix-nv-AyM"/>
+                        <outlet property="surnameTextField" destination="YIv-Dc-r1X" id="MN5-Go-SV6"/>
+                        <outlet property="telephoneNumberTextField" destination="ZAM-bE-rx0" id="6yl-UF-cBi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hOq-i6-RTY">
+                    <connections>
+                        <action selector="tapViewGestureRecognizer:" destination="BYZ-38-t0r" id="HJV-bC-X2V"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
