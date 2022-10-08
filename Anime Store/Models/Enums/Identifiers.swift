@@ -12,7 +12,10 @@ enum Identifiers {
         case logIn = "LogIn"
         case registration = "Registration"
     }
+    enum Cells: String {
+        case main = "MainCollectionCell"
+    }
     enum Segues: String {
-        case registration = "RegistrationSegue"
+        case main = "MainSegue"
     }
 }

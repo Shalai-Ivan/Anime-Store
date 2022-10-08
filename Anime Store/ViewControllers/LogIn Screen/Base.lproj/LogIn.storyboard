@@ -265,6 +265,7 @@
                         <outlet property="signUpButton" destination="A5g-bN-5Al" id="8Ix-nv-AyM"/>
                         <outlet property="surnameTextField" destination="YIv-Dc-r1X" id="MN5-Go-SV6"/>
                         <outlet property="telephoneNumberTextField" destination="ZAM-bE-rx0" id="6yl-UF-cBi"/>
+                        <segue destination="13i-GT-LMX" kind="presentation" identifier="MainSegue" id="A4C-lk-mX2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -275,6 +276,14 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="4wA-vf-Us8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="13i-GT-LMX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Enf-Nl-7TN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="627" y="84"/>
         </scene>
     </scenes>
     <resources>

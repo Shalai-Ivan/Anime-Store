@@ -53,18 +53,18 @@ final class LogInViewController: UIViewController {
             item?.isActive = isHidden
         }
         if isHidden {
-            UIView.animate(withDuration: 0.8, delay: 0) {
-                self.signInButton.alpha = 1; self.signInButton.isHidden = !isHidden
-                self.signUpButton.alpha = 1; self.signUpButton.isHidden = !isHidden
-                self.registerButton.alpha = 0; self.registerButton.isHidden = isHidden
-                self.cancelButton.alpha = 0; self.cancelButton.isHidden = isHidden
+            UIView.animate(withDuration: 0.8, delay: 0) { [weak self] in
+                self?.signInButton.alpha = 1; self?.signInButton.isHidden = !isHidden
+                self?.signUpButton.alpha = 1; self?.signUpButton.isHidden = !isHidden
+                self?.registerButton.alpha = 0; self?.registerButton.isHidden = isHidden
+                self?.cancelButton.alpha = 0; self?.cancelButton.isHidden = isHidden
             }
         } else {
-            UIView.animate(withDuration: 0.8, delay: 0) {
-                self.signInButton.alpha = 0; self.signInButton.isHidden = !isHidden
-                self.signUpButton.alpha = 0; self.signUpButton.isHidden = !isHidden
-                self.registerButton.alpha = 1; self.registerButton.isHidden = isHidden
-                self.cancelButton.alpha = 1; self.cancelButton.isHidden = isHidden
+            UIView.animate(withDuration: 0.8, delay: 0) { [weak self] in
+                self?.signInButton.alpha = 0; self?.signInButton.isHidden = !isHidden
+                self?.signUpButton.alpha = 0; self?.signUpButton.isHidden = !isHidden
+                self?.registerButton.alpha = 1; self?.registerButton.isHidden = isHidden
+                self?.cancelButton.alpha = 1; self?.cancelButton.isHidden = isHidden
             }
         }
         registrationStackConstraint.isActive = !isHidden
@@ -137,6 +137,7 @@ final class LogInViewController: UIViewController {
         view.endEditing(true)
     }
     @IBAction func didTapSignInButton(_ sender: Any) {
+        performSegue(withIdentifier: Identifiers.Segues.main.rawValue, sender: nil)
     }
     @IBAction func didTapSignUpButton(_ sender: Any) {
         toHideTextFields(isHidden: false)
@@ -146,8 +147,6 @@ final class LogInViewController: UIViewController {
     }
     @IBAction func didTapCancelRegistrationButton(_ sender: Any) {
         toHideTextFields(isHidden: true)
-    }
-    @IBAction private func unwindSegueToMain(_ sender: UIStoryboardSegue) {
     }
 }
 

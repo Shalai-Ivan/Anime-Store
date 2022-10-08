@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A10C45828F1A323004DEDED /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A10C45728F1A323004DEDED /* MainCollectionViewCell.swift */; };
+		9A28DC5428F08A7A0097873E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28DC5328F08A7A0097873E /* MainViewModel.swift */; };
 		9A61985B28EB09B60082F7DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61985A28EB09B60082F7DF /* AppDelegate.swift */; };
 		9A61985D28EB09B60082F7DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61985C28EB09B60082F7DF /* SceneDelegate.swift */; };
 		9A61986528EB09B60082F7DF /* Anime_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A61986328EB09B60082F7DF /* Anime_Store.xcdatamodeld */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		8F18FA0CE7F7F3AE9FC78BD3 /* Pods-Anime Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anime Store.debug.xcconfig"; path = "Target Support Files/Pods-Anime Store/Pods-Anime Store.debug.xcconfig"; sourceTree = "<group>"; };
+		9A10C45728F1A323004DEDED /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		9A28DC5328F08A7A0097873E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9A61985728EB09B60082F7DF /* Anime Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anime Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A61985A28EB09B60082F7DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A61985C28EB09B60082F7DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,14 @@
 			children = (
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9A28DC5228F08A6B0097873E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9A28DC5328F08A7A0097873E /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9A61984E28EB09B60082F7DF = {
@@ -196,8 +208,10 @@
 		9AE7D3A128EF3C880010E287 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
+				9A28DC5228F08A6B0097873E /* ViewModel */,
 				9AE7D3A228EF3C9C0010E287 /* Main.storyboard */,
 				9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */,
+				9A10C45728F1A323004DEDED /* MainCollectionViewCell.swift */,
 			);
 			path = "Main Screen";
 			sourceTree = "<group>";
@@ -301,8 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A28DC5428F08A7A0097873E /* MainViewModel.swift in Sources */,
 				9A61985B28EB09B60082F7DF /* AppDelegate.swift in Sources */,
 				9A61986528EB09B60082F7DF /* Anime_Store.xcdatamodeld in Sources */,
+				9A10C45828F1A323004DEDED /* MainCollectionViewCell.swift in Sources */,
 				9A61985D28EB09B60082F7DF /* SceneDelegate.swift in Sources */,
 				9AE7D3A528EF3CAB0010E287 /* MainViewController.swift in Sources */,
 				9A82FECF28EF388C00611D96 /* LogInViewController.swift in Sources */,
