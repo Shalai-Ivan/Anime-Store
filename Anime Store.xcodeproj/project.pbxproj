@@ -18,6 +18,10 @@
 		9A82FECE28EF388C00611D96 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A82FECA28EF388B00611D96 /* LogIn.storyboard */; };
 		9A82FECF28EF388C00611D96 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82FECC28EF388B00611D96 /* LogInViewController.swift */; };
 		9AB9286328EB310E00787754 /* backgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9AB9286228EB310E00787754 /* backgroundVideo.mp4 */; };
+		9AC8779B28F2D04C0059DAEC /* CollectionViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8779A28F2D04B0059DAEC /* CollectionViewViewModelType.swift */; };
+		9AC8779D28F2D2880059DAEC /* CollectionViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8779C28F2D2880059DAEC /* CollectionViewCellViewModelType.swift */; };
+		9AC8779F28F2D4F30059DAEC /* MainViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8779E28F2D4F30059DAEC /* MainViewModelCell.swift */; };
+		9AC877A428F301170059DAEC /* Anime Inept.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AC877A328F301170059DAEC /* Anime Inept.otf */; };
 		9AE7D3A328EF3C9C0010E287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7D3A228EF3C9C0010E287 /* Main.storyboard */; };
 		9AE7D3A528EF3CAB0010E287 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */; };
 		D5E582F643107B373E1C115D /* Pods_Anime_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40D6CD1336DEA1A32952739 /* Pods_Anime_Store.framework */; };
@@ -38,6 +42,10 @@
 		9A82FECB28EF388B00611D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LogIn.storyboard; sourceTree = "<group>"; };
 		9A82FECC28EF388B00611D96 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9AB9286228EB310E00787754 /* backgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundVideo.mp4; sourceTree = "<group>"; };
+		9AC8779A28F2D04B0059DAEC /* CollectionViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewViewModelType.swift; sourceTree = "<group>"; };
+		9AC8779C28F2D2880059DAEC /* CollectionViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellViewModelType.swift; sourceTree = "<group>"; };
+		9AC8779E28F2D4F30059DAEC /* MainViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelCell.swift; sourceTree = "<group>"; };
+		9AC877A328F301170059DAEC /* Anime Inept.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anime Inept.otf"; sourceTree = "<group>"; };
 		9AE7D3A228EF3C9C0010E287 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E40D6CD1336DEA1A32952739 /* Pods_Anime_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anime_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +84,8 @@
 		9A28DC4D28F0140E0097873E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9AC8779A28F2D04B0059DAEC /* CollectionViewViewModelType.swift */,
+				9AC8779C28F2D2880059DAEC /* CollectionViewCellViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -84,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9A28DC5328F08A7A0097873E /* MainViewModel.swift */,
+				9AC8779E28F2D4F30059DAEC /* MainViewModelCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 		9A61987328EB09E00082F7DF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9AC877A028F2FF550059DAEC /* Fonts */,
 				9AB9284A28EB12AE00787754 /* Videos */,
 				9A61986628EB09B70082F7DF /* Assets.xcassets */,
 			);
@@ -203,6 +215,14 @@
 				9AB9286228EB310E00787754 /* backgroundVideo.mp4 */,
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		9AC877A028F2FF550059DAEC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9AC877A328F301170059DAEC /* Anime Inept.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9AE7D3A128EF3C880010E287 /* Main Screen */ = {
@@ -277,6 +297,7 @@
 			files = (
 				9A61986A28EB09B70082F7DF /* LaunchScreen.storyboard in Resources */,
 				9A61986728EB09B70082F7DF /* Assets.xcassets in Resources */,
+				9AC877A428F301170059DAEC /* Anime Inept.otf in Resources */,
 				9AE7D3A328EF3C9C0010E287 /* Main.storyboard in Resources */,
 				9AB9286328EB310E00787754 /* backgroundVideo.mp4 in Resources */,
 				9A82FECE28EF388C00611D96 /* LogIn.storyboard in Resources */,
@@ -316,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A28DC5428F08A7A0097873E /* MainViewModel.swift in Sources */,
+				9AC8779D28F2D2880059DAEC /* CollectionViewCellViewModelType.swift in Sources */,
 				9A61985B28EB09B60082F7DF /* AppDelegate.swift in Sources */,
 				9A61986528EB09B60082F7DF /* Anime_Store.xcdatamodeld in Sources */,
 				9A10C45828F1A323004DEDED /* MainCollectionViewCell.swift in Sources */,
@@ -323,6 +345,8 @@
 				9AE7D3A528EF3CAB0010E287 /* MainViewController.swift in Sources */,
 				9A82FECF28EF388C00611D96 /* LogInViewController.swift in Sources */,
 				9A82FEAD28EEBBCE00611D96 /* Identifiers.swift in Sources */,
+				9AC8779F28F2D4F30059DAEC /* MainViewModelCell.swift in Sources */,
+				9AC8779B28F2D04C0059DAEC /* CollectionViewViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

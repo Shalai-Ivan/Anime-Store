@@ -9,7 +9,16 @@ import UIKit
 
 class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var didTapToRight: UIButton!
-    @IBOutlet weak var didTapToLeft: UIButton!
+    @IBOutlet weak var nameTextLabel: UILabel!
+    weak var viewModel: CollectionViewCellViewModelType? {
+        didSet {
+            guard let viewModel = viewModel else { return }
+            imageView.image = viewModel.image
+            nameTextLabel.text = viewModel.text
+        }
+    }
+    @IBAction func didTapToLeftButton(_ sender: Any) {
+    }
+    @IBAction func didTapToRightButton(_ sender: Any) {
+    }
 }
