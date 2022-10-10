@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHv-Z5-Jny">
-                                <rect key="frame" x="66.5" y="54" width="281.5" height="29.5"/>
+                                <rect key="frame" x="66.5" y="44" width="281.5" height="29.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Anime Streaming Service">
                                         <attributes>
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PI9-KQ-Fmn">
-                                <rect key="frame" x="5" y="93.5" width="404" height="269"/>
+                                <rect key="frame" x="5" y="83.5" width="404" height="269"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kKW-Iu-aVc">
                                     <size key="itemSize" width="128" height="128"/>
@@ -107,7 +107,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mMp-fF-O3A">
-                                <rect key="frame" x="0.0" y="393.5" width="414" height="151"/>
+                                <rect key="frame" x="0.0" y="383.5" width="414" height="138.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uzS-5u-6Ox">
                                     <size key="itemSize" width="130" height="150"/>
@@ -117,7 +117,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" reuseIdentifier="MoviesCollectionCell" id="DfV-Bh-kb2" userLabel="MainCollectionCell" customClass="MainCollectionViewCell" customModule="Anime_Store" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.5" width="130" height="150"/>
+                                        <rect key="frame" x="0.0" y="-6" width="130" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="hZE-J2-lW6">
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
@@ -162,7 +162,7 @@
                                 </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GiA-06-tQ8">
-                                <rect key="frame" x="0.0" y="575.5" width="414" height="151"/>
+                                <rect key="frame" x="0.0" y="553" width="414" height="139"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xmr-rn-jrq">
                                     <size key="itemSize" width="130" height="150"/>
@@ -172,7 +172,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" reuseIdentifier="MoviesCollectionCell" id="bi2-Al-aNf" userLabel="MainCollectionCell" customClass="MainCollectionViewCell" customModule="Anime_Store" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.5" width="130" height="150"/>
+                                        <rect key="frame" x="0.0" y="-5.5" width="130" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="gwp-5n-fdS">
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
@@ -217,7 +217,7 @@
                                 </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oxD-t4-gdL">
-                                <rect key="frame" x="0.0" y="757.5" width="414" height="151"/>
+                                <rect key="frame" x="0.0" y="723" width="414" height="139"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="urv-SC-h4G">
                                     <size key="itemSize" width="130" height="150"/>
@@ -227,7 +227,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" reuseIdentifier="MoviesCollectionCell" id="GgZ-er-aKc" userLabel="MainCollectionCell" customClass="MainCollectionViewCell" customModule="Anime_Store" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.5" width="130" height="150"/>
+                                        <rect key="frame" x="0.0" y="-5.5" width="130" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="N5c-bd-Uy6">
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
@@ -272,7 +272,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slc-3A-UBa">
-                                <rect key="frame" x="10" y="367.5" width="89" height="21"/>
+                                <rect key="frame" x="10" y="357.5" width="89" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Category 1">
                                         <attributes>
@@ -284,7 +284,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-di-roz">
-                                <rect key="frame" x="10" y="549.5" width="89" height="21"/>
+                                <rect key="frame" x="10" y="527" width="89" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Category 2">
                                         <attributes>
@@ -297,7 +297,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRL-7M-1nl">
-                                <rect key="frame" x="10" y="731.5" width="89" height="21"/>
+                                <rect key="frame" x="10" y="697" width="89" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Category 3">
                                         <attributes>
@@ -311,13 +311,13 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="PI9-KQ-Fmn" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.3" id="6p2-fD-PH6"/>
                             <constraint firstItem="oxD-t4-gdL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7dT-Jo-84I"/>
                             <constraint firstItem="PI9-KQ-Fmn" firstAttribute="top" secondItem="LHv-Z5-Jny" secondAttribute="bottom" constant="10" id="8hV-aO-8Lw"/>
                             <constraint firstItem="slc-3A-UBa" firstAttribute="top" secondItem="PI9-KQ-Fmn" secondAttribute="bottom" constant="5" id="AMs-5K-Kbl"/>
-                            <constraint firstItem="LHv-Z5-Jny" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="BEK-pu-RaG"/>
+                            <constraint firstItem="LHv-Z5-Jny" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="BEK-pu-RaG"/>
                             <constraint firstItem="oxD-t4-gdL" firstAttribute="top" secondItem="bRL-7M-1nl" secondAttribute="bottom" constant="5" id="KhR-2C-5bN"/>
                             <constraint firstItem="GiA-06-tQ8" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="L9e-Jq-Nuo"/>
                             <constraint firstItem="slc-3A-UBa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="N8p-11-fW9"/>
@@ -331,16 +331,16 @@
                             <constraint firstItem="bRL-7M-1nl" firstAttribute="top" secondItem="GiA-06-tQ8" secondAttribute="bottom" constant="5" id="TVG-Ih-IQc"/>
                             <constraint firstItem="zSk-zI-oCi" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.503" id="W6O-fo-wNN"/>
                             <constraint firstItem="oxD-t4-gdL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Xs2-3v-G43"/>
-                            <constraint firstItem="GiA-06-tQ8" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.168527" id="YsT-JS-AlU"/>
                             <constraint firstItem="y5j-di-roz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="b0s-IW-cqg"/>
                             <constraint firstItem="LHv-Z5-Jny" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="dC2-bm-kkw"/>
                             <constraint firstItem="GiA-06-tQ8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dUb-Z3-6ky"/>
                             <constraint firstItem="PI9-KQ-Fmn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="fPD-iE-59z"/>
+                            <constraint firstItem="mMp-fF-O3A" firstAttribute="height" secondItem="oxD-t4-gdL" secondAttribute="height" id="gXm-jK-bYx"/>
+                            <constraint firstItem="GiA-06-tQ8" firstAttribute="height" secondItem="oxD-t4-gdL" secondAttribute="height" id="gYh-pK-s9b"/>
                             <constraint firstItem="mTh-Ac-rEN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.503" id="h79-0D-MbS"/>
                             <constraint firstItem="mTh-Ac-rEN" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0502232" id="kGs-WC-By7"/>
                             <constraint firstItem="zSk-zI-oCi" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.108696" id="mb8-LW-wNN"/>
-                            <constraint firstItem="oxD-t4-gdL" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.168527" id="oP5-92-whA"/>
-                            <constraint firstItem="mMp-fF-O3A" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.168527" id="pPF-cs-xP7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="oxD-t4-gdL" secondAttribute="bottom" id="nsd-8V-VB6"/>
                             <constraint firstItem="mMp-fF-O3A" firstAttribute="top" secondItem="slc-3A-UBa" secondAttribute="bottom" constant="5" id="plX-qD-aaJ"/>
                             <constraint firstItem="mMp-fF-O3A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vT3-Ji-YgQ"/>
                             <constraint firstItem="mTh-Ac-rEN" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.108696" id="xvF-6U-48t"/>
@@ -363,6 +363,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
