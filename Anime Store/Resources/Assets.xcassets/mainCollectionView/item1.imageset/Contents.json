@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Pin by Kiều Tiểu Thư on Cổ _ Scenery wallpaper, Anime scenery wallpaper, Cute wallpaper backgrounds.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

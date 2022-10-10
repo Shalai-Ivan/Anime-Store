@@ -14,6 +14,7 @@ enum Identifiers {
     }
     enum Cells: String {
         case main = "MainCollectionCell"
+        case movies = "MoviesCollectionCell"
     }
     enum Segues: String {
         case main = "MainSegue"

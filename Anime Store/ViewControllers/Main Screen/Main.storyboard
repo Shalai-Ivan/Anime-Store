@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,20 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHv-Z5-Jny">
-                                <rect key="frame" x="94.5" y="54" width="225" height="24"/>
+                                <rect key="frame" x="66.5" y="54" width="281.5" height="29.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Anime Streaming Service">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="20" name="AnimeInept"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="25" name="AnimeInept"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PI9-KQ-Fmn">
-                                <rect key="frame" x="5" y="88" width="404" height="269"/>
+                                <rect key="frame" x="5" y="93.5" width="404" height="269"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kKW-Iu-aVc">
                                     <size key="itemSize" width="128" height="128"/>
@@ -51,13 +49,14 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DZ7-X2-pjX">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITG-fY-DdP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITG-fY-DdP">
                                                     <rect key="frame" x="30" y="188" width="58.5" height="30"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Name">
                                                             <attributes>
                                                                 <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <font key="NSFont" size="22" name="AnimeInept"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -82,19 +81,18 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="a92-32-w4u"/>
-                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="E0J-vO-YZR"/>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="3e1-GQ-Ybg"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="5aU-r1-5Sr"/>
                                 </connections>
                             </collectionView>
                             <button contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSk-zI-oCi">
                                 <rect key="frame" x="20" y="203" width="45" height="45"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="chevron.left.circle.fill" catalog="system" renderingMode="original"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapToRightButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dFu-za-Pr8"/>
+                                    <action selector="didTapToLeftButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wRq-7W-hX1"/>
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTh-Ac-rEN">
@@ -102,35 +100,259 @@
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="chevron.right.circle.fill" catalog="system" renderingMode="original"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapToLeftButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zsr-Rq-S9A"/>
+                                    <action selector="didTapToRightButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kNx-GJ-9nG"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mMp-fF-O3A">
+                                <rect key="frame" x="0.0" y="393.5" width="414" height="151"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uzS-5u-6Ox">
+                                    <size key="itemSize" width="130" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" reuseIdentifier="MoviesCollectionCell" id="DfV-Bh-kb2" userLabel="MainCollectionCell" customClass="MainCollectionViewCell" customModule="Anime_Store" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.5" width="130" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="hZE-J2-lW6">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-Kd-X0f">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="834-PG-qDP">
+                                                    <rect key="frame" x="42.5" y="10" width="45" height="21"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Name">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="AnimeInept"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="834-PG-qDP" firstAttribute="top" secondItem="hZE-J2-lW6" secondAttribute="top" constant="10" id="XZK-MA-r3E"/>
+                                                <constraint firstItem="CYQ-Kd-X0f" firstAttribute="leading" secondItem="hZE-J2-lW6" secondAttribute="leading" id="fOW-SE-oF7"/>
+                                                <constraint firstItem="834-PG-qDP" firstAttribute="centerX" secondItem="hZE-J2-lW6" secondAttribute="centerX" id="fcW-KQ-jKF"/>
+                                                <constraint firstItem="834-PG-qDP" firstAttribute="height" secondItem="CYQ-Kd-X0f" secondAttribute="height" multiplier="0.14" id="nsx-YG-isD"/>
+                                                <constraint firstItem="CYQ-Kd-X0f" firstAttribute="top" secondItem="hZE-J2-lW6" secondAttribute="top" id="qLv-eY-N1F"/>
+                                                <constraint firstAttribute="trailing" secondItem="CYQ-Kd-X0f" secondAttribute="trailing" id="sfv-10-2MI"/>
+                                                <constraint firstAttribute="bottom" secondItem="CYQ-Kd-X0f" secondAttribute="bottom" id="tfF-N2-Jft"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="130" height="150"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="CYQ-Kd-X0f" id="c2Y-50-lKf"/>
+                                            <outlet property="nameTextLabel" destination="834-PG-qDP" id="wmZ-Ny-uUa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="FA1-ZC-08T"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="vxl-Aj-zlj"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GiA-06-tQ8">
+                                <rect key="frame" x="0.0" y="575.5" width="414" height="151"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xmr-rn-jrq">
+                                    <size key="itemSize" width="130" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" reuseIdentifier="MoviesCollectionCell" id="bi2-Al-aNf" userLabel="MainCollectionCell" customClass="MainCollectionViewCell" customModule="Anime_Store" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.5" width="130" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="gwp-5n-fdS">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ctW-cZ-fbf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-5E-lLv">
+                                                    <rect key="frame" x="42.5" y="10" width="45" height="21"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Name">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="AnimeInept"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ctW-cZ-fbf" secondAttribute="bottom" id="6qq-xL-odY"/>
+                                                <constraint firstItem="ctW-cZ-fbf" firstAttribute="top" secondItem="gwp-5n-fdS" secondAttribute="top" id="RPJ-xp-zSv"/>
+                                                <constraint firstItem="irJ-5E-lLv" firstAttribute="top" secondItem="gwp-5n-fdS" secondAttribute="top" constant="10" id="TiJ-NN-IRd"/>
+                                                <constraint firstItem="irJ-5E-lLv" firstAttribute="height" secondItem="ctW-cZ-fbf" secondAttribute="height" multiplier="0.14" id="bnz-no-rz9"/>
+                                                <constraint firstItem="irJ-5E-lLv" firstAttribute="centerX" secondItem="gwp-5n-fdS" secondAttribute="centerX" id="ogp-vV-MGc"/>
+                                                <constraint firstAttribute="trailing" secondItem="ctW-cZ-fbf" secondAttribute="trailing" id="tAq-hp-gwi"/>
+                                                <constraint firstItem="ctW-cZ-fbf" firstAttribute="leading" secondItem="gwp-5n-fdS" secondAttribute="leading" id="xPD-N9-yDU"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="130" height="150"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="ctW-cZ-fbf" id="l3v-j3-dQe"/>
+                                            <outlet property="nameTextLabel" destination="irJ-5E-lLv" id="nyY-q5-RZc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="WE5-3p-Kyl"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Fmc-kj-Xwn"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oxD-t4-gdL">
+                                <rect key="frame" x="0.0" y="757.5" width="414" height="151"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="urv-SC-h4G">
+                                    <size key="itemSize" width="130" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" reuseIdentifier="MoviesCollectionCell" id="GgZ-er-aKc" userLabel="MainCollectionCell" customClass="MainCollectionViewCell" customModule="Anime_Store" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.5" width="130" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="N5c-bd-Uy6">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-az-oQX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-bV-o5x">
+                                                    <rect key="frame" x="42.5" y="10" width="45" height="21"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Name">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="AnimeInept"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="f9b-az-oQX" secondAttribute="bottom" id="NeI-4p-G3G"/>
+                                                <constraint firstItem="eDU-bV-o5x" firstAttribute="centerX" secondItem="N5c-bd-Uy6" secondAttribute="centerX" id="Rgm-cg-rPN"/>
+                                                <constraint firstItem="f9b-az-oQX" firstAttribute="leading" secondItem="N5c-bd-Uy6" secondAttribute="leading" id="T55-3a-uzX"/>
+                                                <constraint firstItem="eDU-bV-o5x" firstAttribute="top" secondItem="N5c-bd-Uy6" secondAttribute="top" constant="10" id="WqF-aV-PXS"/>
+                                                <constraint firstAttribute="trailing" secondItem="f9b-az-oQX" secondAttribute="trailing" id="glz-dQ-3Ea"/>
+                                                <constraint firstItem="f9b-az-oQX" firstAttribute="top" secondItem="N5c-bd-Uy6" secondAttribute="top" id="ora-QM-wQz"/>
+                                                <constraint firstItem="eDU-bV-o5x" firstAttribute="height" secondItem="f9b-az-oQX" secondAttribute="height" multiplier="0.14" id="vfe-kI-RGk"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="130" height="150"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="f9b-az-oQX" id="nVP-Zq-AIN"/>
+                                            <outlet property="nameTextLabel" destination="eDU-bV-o5x" id="Hhf-aa-KFM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="uCh-aO-DyX"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="OI7-0W-I8v"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slc-3A-UBa">
+                                <rect key="frame" x="10" y="367.5" width="89" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Category 1">
+                                        <attributes>
+                                            <color key="NSColor" red="0.97227032230640986" green="0.97920274172980748" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="AnimeInept"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-di-roz">
+                                <rect key="frame" x="10" y="549.5" width="89" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Category 2">
+                                        <attributes>
+                                            <color key="NSColor" red="0.97227032230640986" green="0.97920274172980748" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="AnimeInept"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRL-7M-1nl">
+                                <rect key="frame" x="10" y="731.5" width="89" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Category 3">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="AnimeInept"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PI9-KQ-Fmn" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.3" id="6p2-fD-PH6"/>
+                            <constraint firstItem="oxD-t4-gdL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7dT-Jo-84I"/>
                             <constraint firstItem="PI9-KQ-Fmn" firstAttribute="top" secondItem="LHv-Z5-Jny" secondAttribute="bottom" constant="10" id="8hV-aO-8Lw"/>
+                            <constraint firstItem="slc-3A-UBa" firstAttribute="top" secondItem="PI9-KQ-Fmn" secondAttribute="bottom" constant="5" id="AMs-5K-Kbl"/>
                             <constraint firstItem="LHv-Z5-Jny" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="BEK-pu-RaG"/>
+                            <constraint firstItem="oxD-t4-gdL" firstAttribute="top" secondItem="bRL-7M-1nl" secondAttribute="bottom" constant="5" id="KhR-2C-5bN"/>
+                            <constraint firstItem="GiA-06-tQ8" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="L9e-Jq-Nuo"/>
+                            <constraint firstItem="slc-3A-UBa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="N8p-11-fW9"/>
                             <constraint firstItem="zSk-zI-oCi" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0502232" id="NsE-53-UIY"/>
+                            <constraint firstItem="y5j-di-roz" firstAttribute="top" secondItem="mMp-fF-O3A" secondAttribute="bottom" constant="5" id="O8h-5G-LAO"/>
                             <constraint firstItem="zSk-zI-oCi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="RCg-IP-X4Z"/>
                             <constraint firstAttribute="trailing" secondItem="mTh-Ac-rEN" secondAttribute="trailing" constant="20" id="SYM-yD-k61"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mMp-fF-O3A" secondAttribute="trailing" id="Sol-q0-dvB"/>
+                            <constraint firstItem="bRL-7M-1nl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="T9x-GX-l83"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PI9-KQ-Fmn" secondAttribute="trailing" constant="5" id="TQY-fX-Orw"/>
+                            <constraint firstItem="bRL-7M-1nl" firstAttribute="top" secondItem="GiA-06-tQ8" secondAttribute="bottom" constant="5" id="TVG-Ih-IQc"/>
                             <constraint firstItem="zSk-zI-oCi" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.503" id="W6O-fo-wNN"/>
+                            <constraint firstItem="oxD-t4-gdL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Xs2-3v-G43"/>
+                            <constraint firstItem="GiA-06-tQ8" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.168527" id="YsT-JS-AlU"/>
+                            <constraint firstItem="y5j-di-roz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="b0s-IW-cqg"/>
                             <constraint firstItem="LHv-Z5-Jny" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="dC2-bm-kkw"/>
+                            <constraint firstItem="GiA-06-tQ8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dUb-Z3-6ky"/>
                             <constraint firstItem="PI9-KQ-Fmn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="fPD-iE-59z"/>
                             <constraint firstItem="mTh-Ac-rEN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.503" id="h79-0D-MbS"/>
                             <constraint firstItem="mTh-Ac-rEN" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.0502232" id="kGs-WC-By7"/>
                             <constraint firstItem="zSk-zI-oCi" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.108696" id="mb8-LW-wNN"/>
+                            <constraint firstItem="oxD-t4-gdL" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.168527" id="oP5-92-whA"/>
+                            <constraint firstItem="mMp-fF-O3A" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.168527" id="pPF-cs-xP7"/>
+                            <constraint firstItem="mMp-fF-O3A" firstAttribute="top" secondItem="slc-3A-UBa" secondAttribute="bottom" constant="5" id="plX-qD-aaJ"/>
+                            <constraint firstItem="mMp-fF-O3A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vT3-Ji-YgQ"/>
                             <constraint firstItem="mTh-Ac-rEN" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.108696" id="xvF-6U-48t"/>
+                            <constraint firstItem="GiA-06-tQ8" firstAttribute="top" secondItem="y5j-di-roz" secondAttribute="bottom" constant="5" id="yIk-JP-Brw"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="PI9-KQ-Fmn" id="m4n-Cj-BcJ"/>
+                        <outlet property="category1Label" destination="slc-3A-UBa" id="2u8-Cl-7pT"/>
+                        <outlet property="category2Label" destination="y5j-di-roz" id="lmw-WK-F6b"/>
+                        <outlet property="category3Label" destination="bRL-7M-1nl" id="KoQ-TM-19S"/>
+                        <outlet property="mainCollectionView" destination="PI9-KQ-Fmn" id="m4n-Cj-BcJ"/>
+                        <outlet property="moviesCollectionView" destination="mMp-fF-O3A" id="7lP-Fj-Hag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -139,13 +361,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -18,8 +18,14 @@ extension MainViewModel: CollectionViewViewModelType {
     func getImagesCount() -> Int {
         return images.count
     }
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> CollectionViewCellViewModelType {
-        let image = images[indexPath.row]
-        return MainViewModelCell(image: image, text: imageName)
+    func cellViewModel(forIndexPath indexPath: IndexPath, forTag tag: Int) -> CollectionViewCellViewModelType {
+        switch tag {
+        case 0:
+            let image = images[indexPath.row]
+            return MainViewModelCell(image: image, text: imageName)
+        default:
+            let image = images[indexPath.row]
+            return MainViewModelCell(image: image, text: imageName)
+        }
     }
 }

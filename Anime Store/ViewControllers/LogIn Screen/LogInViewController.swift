@@ -32,15 +32,17 @@ final class LogInViewController: UIViewController {
     private var emailFieldConstraint: NSLayoutConstraint!
     private var telephoneNumberFieldConstraint: NSLayoutConstraint!
     private var registrationStackConstraint: NSLayoutConstraint!
+    private let AVPLayerModel = AVPlayerModel()
     deinit {
-        removeObservers()
+        removeKeyboardObservers()
+        AVPLayerModel.removeVideoPlayerObserver()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSettings()
     }
     private func setupSettings() {
-        playBackgroundVideo()
+        AVPLayerModel.playBackgroundVideo(forUrl: AVPLayerModel.logInBackgroundVideo, forView: self.view, speed: 1)
         interfaceSettings()
         registerForKeyboardNotification()
         configurateRegistration()
@@ -98,21 +100,12 @@ final class LogInViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(showKeyboard(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(hideKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    private func removeObservers() {
+    private func removeKeyboardObservers() {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    private func playBackgroundVideo() {
-        guard let url = Bundle.main.url(forResource: "backgroundVideo", withExtension: "mp4") else { return }
-        let player = AVPlayer(url: url)
-        let videoLayer = AVPlayerLayer(player: player)
-        videoLayer.videoGravity = .resizeAspectFill
-        player.actionAtItemEnd = .none
-        videoLayer.frame = self.view.layer.bounds
-        self.view.backgroundColor = .clear
-        self.view.layer.insertSublayer(videoLayer, at: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(repeatVideo(notification:)), name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
-        player.play()
+    private func removeVideoPlayerObserver() {
+        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
     
     // MARK: - @objc functions
@@ -125,10 +118,6 @@ final class LogInViewController: UIViewController {
     }
     @objc private func hideKeyboard() {
         self.view.frame.origin.y = .zero
-    }
-    @objc private func repeatVideo(notification: Notification) {
-        let playerItem = notification.object as? AVPlayerItem
-        playerItem?.seek(to: .zero, completionHandler: nil)
     }
     
     // MARK: - @IBActions
