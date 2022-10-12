@@ -14,6 +14,8 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var category1Label: UILabel!
     @IBOutlet weak var category2Label: UILabel!
     @IBOutlet weak var category3Label: UILabel!
+    private var animeModel: AnimeModel?
+    private var networkManager = NetworkManager()
     private var viewModel: CollectionViewViewModelType?
     private let AVPLayerModel = AVPlayerModel()
     private var imageNumber: Int = 0
@@ -22,9 +24,16 @@ final class MainViewController: UIViewController {
         viewModel = MainViewModel()
         AVPLayerModel.playBackgroundVideo(forUrl: AVPLayerModel.mainBackgroundVideo, forView: self.view, speed: 0.8)
         startTimer()
+        networkManager.fetchRequest(typeRequest: .name(name: "Bleach"))
     }
     deinit {
         AVPLayerModel.removeVideoPlayerObserver()
+    }
+    private func updateInterface(animeModel: AnimeModel) {
+        DispatchQueue.main.async { [weak self] in
+            self?.category1Label.text = animeModel.title
+            self?.moviesCollectionView.reloadData()
+        }
     }
     private func startTimer() {
         let _ = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(scrollCollectionViewForward), userInfo: nil, repeats: true)

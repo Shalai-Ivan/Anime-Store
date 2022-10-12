@@ -8,6 +8,7 @@
 import UIKit
 
 class MainViewModel {
+    private let networkManager = NetworkManager()
     var images: [UIImage] {
         Array(0...5).compactMap { UIImage(named: "item\($0)") }
     }

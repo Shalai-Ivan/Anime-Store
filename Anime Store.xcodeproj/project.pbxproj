@@ -19,6 +19,7 @@
 		9A82FEAD28EEBBCE00611D96 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82FEAC28EEBBCE00611D96 /* Identifiers.swift */; };
 		9A82FECE28EF388C00611D96 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A82FECA28EF388B00611D96 /* LogIn.storyboard */; };
 		9A82FECF28EF388C00611D96 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82FECC28EF388B00611D96 /* LogInViewController.swift */; };
+		9AA6958328F5742B00180191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA6958228F5742B00180191 /* NetworkManager.swift */; };
 		9AB9286328EB310E00787754 /* logInBackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9AB9286228EB310E00787754 /* logInBackgroundVideo.mp4 */; };
 		9AC8779B28F2D04C0059DAEC /* CollectionViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8779A28F2D04B0059DAEC /* CollectionViewViewModelType.swift */; };
 		9AC8779D28F2D2880059DAEC /* CollectionViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8779C28F2D2880059DAEC /* CollectionViewCellViewModelType.swift */; };
@@ -27,6 +28,8 @@
 		9AE7D3A328EF3C9C0010E287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7D3A228EF3C9C0010E287 /* Main.storyboard */; };
 		9AE7D3A528EF3CAB0010E287 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */; };
 		9AEE196628F435F1006A1878 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE196528F435F1006A1878 /* MoviesCollectionViewCell.swift */; };
+		9AEEC4E728F58D030047DF13 /* AnimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC4E628F58D030047DF13 /* AnimeData.swift */; };
+		9AEEC4E928F58FF10047DF13 /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC4E828F58FF10047DF13 /* AnimeModel.swift */; };
 		D5E582F643107B373E1C115D /* Pods_Anime_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40D6CD1336DEA1A32952739 /* Pods_Anime_Store.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,7 @@
 		9A82FEAC28EEBBCE00611D96 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		9A82FECB28EF388B00611D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LogIn.storyboard; sourceTree = "<group>"; };
 		9A82FECC28EF388B00611D96 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9AA6958228F5742B00180191 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9AB9286228EB310E00787754 /* logInBackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = logInBackgroundVideo.mp4; sourceTree = "<group>"; };
 		9AC8779A28F2D04B0059DAEC /* CollectionViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewViewModelType.swift; sourceTree = "<group>"; };
 		9AC8779C28F2D2880059DAEC /* CollectionViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellViewModelType.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		9AE7D3A228EF3C9C0010E287 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9AEE196528F435F1006A1878 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		9AEEC4E628F58D030047DF13 /* AnimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeData.swift; sourceTree = "<group>"; };
+		9AEEC4E828F58FF10047DF13 /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
 		E40D6CD1336DEA1A32952739 /* Pods_Anime_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anime_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1A72A16586A224C0B2BF5A /* Pods-Anime Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anime Store.release.xcconfig"; path = "Target Support Files/Pods-Anime Store/Pods-Anime Store.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +192,7 @@
 		9A82FEAA28EEBBA200611D96 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9AA6958128F5741A00180191 /* API Manager */,
 				9A3D213628F35FDA00358E70 /* AVPlayer */,
 				9A82FEAB28EEBBAD00611D96 /* Enums */,
 			);
@@ -222,6 +229,16 @@
 				9A82FECC28EF388B00611D96 /* LogInViewController.swift */,
 			);
 			path = "LogIn Screen";
+			sourceTree = "<group>";
+		};
+		9AA6958128F5741A00180191 /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9AA6958228F5742B00180191 /* NetworkManager.swift */,
+				9AEEC4E628F58D030047DF13 /* AnimeData.swift */,
+				9AEEC4E828F58FF10047DF13 /* AnimeModel.swift */,
+			);
+			path = "API Manager";
 			sourceTree = "<group>";
 		};
 		9AB9284A28EB12AE00787754 /* Videos */ = {
@@ -280,6 +297,7 @@
 				9A61985328EB09B60082F7DF /* Sources */,
 				9A61985428EB09B60082F7DF /* Frameworks */,
 				9A61985528EB09B60082F7DF /* Resources */,
+				84CFCE77470C256AA57AFEE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +359,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		84CFCE77470C256AA57AFEE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anime Store/Pods-Anime Store-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anime Store/Pods-Anime Store-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Anime Store/Pods-Anime Store-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A55220C062DBC96A8C74D1D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,10 +411,13 @@
 				9A61985B28EB09B60082F7DF /* AppDelegate.swift in Sources */,
 				9A61986528EB09B60082F7DF /* Anime_Store.xcdatamodeld in Sources */,
 				9A10C45828F1A323004DEDED /* MainCollectionViewCell.swift in Sources */,
+				9AEEC4E928F58FF10047DF13 /* AnimeModel.swift in Sources */,
 				9A61985D28EB09B60082F7DF /* SceneDelegate.swift in Sources */,
 				9AE7D3A528EF3CAB0010E287 /* MainViewController.swift in Sources */,
+				9AEEC4E728F58D030047DF13 /* AnimeData.swift in Sources */,
 				9A82FECF28EF388C00611D96 /* LogInViewController.swift in Sources */,
 				9A82FEAD28EEBBCE00611D96 /* Identifiers.swift in Sources */,
+				9AA6958328F5742B00180191 /* NetworkManager.swift in Sources */,
 				9AC8779F28F2D4F30059DAEC /* MainViewModelCell.swift in Sources */,
 				9AC8779B28F2D04C0059DAEC /* CollectionViewViewModelType.swift in Sources */,
 				9A3D213828F35FF300358E70 /* AVPlayerModel.swift in Sources */,

@@ -6,5 +6,5 @@ target 'Anime Store' do
   use_frameworks!
 
   # Pods for Anime Store
-
+  pod 'Alamofire', '5.6.2'
 end
