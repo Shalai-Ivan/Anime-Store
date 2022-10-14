@@ -27,7 +27,6 @@
 		9AC877A428F301170059DAEC /* Anime Inept.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AC877A328F301170059DAEC /* Anime Inept.otf */; };
 		9AE7D3A328EF3C9C0010E287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7D3A228EF3C9C0010E287 /* Main.storyboard */; };
 		9AE7D3A528EF3CAB0010E287 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */; };
-		9AEE196628F435F1006A1878 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE196528F435F1006A1878 /* MoviesCollectionViewCell.swift */; };
 		9AEEC4E728F58D030047DF13 /* AnimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC4E628F58D030047DF13 /* AnimeData.swift */; };
 		9AEEC4E928F58FF10047DF13 /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEC4E828F58FF10047DF13 /* AnimeModel.swift */; };
 		D5E582F643107B373E1C115D /* Pods_Anime_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40D6CD1336DEA1A32952739 /* Pods_Anime_Store.framework */; };
@@ -57,7 +56,6 @@
 		9AC877A328F301170059DAEC /* Anime Inept.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anime Inept.otf"; sourceTree = "<group>"; };
 		9AE7D3A228EF3C9C0010E287 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		9AEE196528F435F1006A1878 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AEEC4E628F58D030047DF13 /* AnimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeData.swift; sourceTree = "<group>"; };
 		9AEEC4E828F58FF10047DF13 /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
 		E40D6CD1336DEA1A32952739 /* Pods_Anime_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anime_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,7 +262,6 @@
 				9AE7D3A228EF3C9C0010E287 /* Main.storyboard */,
 				9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */,
 				9AEE196728F439F4006A1878 /* MainCollectionCell */,
-				9AEE196828F43A07006A1878 /* MoviesCollectionCell */,
 				9A28DC5228F08A6B0097873E /* ViewModel */,
 			);
 			path = "Main Screen";
@@ -276,14 +273,6 @@
 				9A10C45728F1A323004DEDED /* MainCollectionViewCell.swift */,
 			);
 			path = MainCollectionCell;
-			sourceTree = "<group>";
-		};
-		9AEE196828F43A07006A1878 /* MoviesCollectionCell */ = {
-			isa = PBXGroup;
-			children = (
-				9AEE196528F435F1006A1878 /* MoviesCollectionViewCell.swift */,
-			);
-			path = MoviesCollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,7 +395,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A28DC5428F08A7A0097873E /* MainViewModel.swift in Sources */,
-				9AEE196628F435F1006A1878 /* MoviesCollectionViewCell.swift in Sources */,
 				9AC8779D28F2D2880059DAEC /* CollectionViewCellViewModelType.swift in Sources */,
 				9A61985B28EB09B60082F7DF /* AppDelegate.swift in Sources */,
 				9A61986528EB09B60082F7DF /* Anime_Store.xcdatamodeld in Sources */,

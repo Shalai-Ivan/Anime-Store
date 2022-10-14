@@ -13,19 +13,20 @@ struct AnimeData: Codable {
 
 struct DataType: Codable {
     let images: Images
-    let titles: [Titles]
+    let title: String
+    enum CodingKeys: String, CodingKey {
+        case images = "images"
+        case title = "title_english"
+    }
 }
 
-struct Titles: Codable {
-    let title: String
-}
 struct Images: Codable {
     let jpg: Jpg
 }
 
 struct Jpg: Codable {
-    let imageUrl: String
+    let image: String
     enum CodingKeys: String, CodingKey {
-        case imageUrl = "image_url"
+        case image = "image_url"
     }
 }

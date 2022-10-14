@@ -10,11 +10,12 @@ import UIKit
 
 final class MainViewController: UIViewController {
     @IBOutlet private weak var mainCollectionView: UICollectionView!
-    @IBOutlet private weak var moviesCollectionView: UICollectionView!
-    @IBOutlet weak var category1Label: UILabel!
-    @IBOutlet weak var category2Label: UILabel!
-    @IBOutlet weak var category3Label: UILabel!
-    private var animeModel: AnimeModel?
+    @IBOutlet private weak var apiCollectionView: UICollectionView!
+    @IBOutlet private weak var adminCollectionView: UICollectionView!
+    @IBOutlet private weak var usersCollectionView: UICollectionView!
+    @IBOutlet private weak var category1Label: UILabel!
+    @IBOutlet private weak var category2Label: UILabel!
+    @IBOutlet private weak var category3Label: UILabel!
     private var networkManager = NetworkManager()
     private var viewModel: CollectionViewViewModelType?
     private let AVPLayerModel = AVPlayerModel()
@@ -24,7 +25,6 @@ final class MainViewController: UIViewController {
         viewModel = MainViewModel()
         AVPLayerModel.playBackgroundVideo(forUrl: AVPLayerModel.mainBackgroundVideo, forView: self.view, speed: 0.8)
         startTimer()
-        networkManager.fetchRequest(typeRequest: .name(name: "Bleach"))
     }
     deinit {
         AVPLayerModel.removeVideoPlayerObserver()
@@ -32,14 +32,14 @@ final class MainViewController: UIViewController {
     private func updateInterface(animeModel: AnimeModel) {
         DispatchQueue.main.async { [weak self] in
             self?.category1Label.text = animeModel.title
-            self?.moviesCollectionView.reloadData()
+            self?.apiCollectionView.reloadData()
         }
     }
     private func startTimer() {
         let _ = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(scrollCollectionViewForward), userInfo: nil, repeats: true)
     }
     @objc private func scrollCollectionViewForward() {
-        guard let counts = viewModel?.getImagesCount() else { return }
+        guard let counts = viewModel?.getImagesCount(forTag: mainCollectionView.tag) else { return }
         if imageNumber < counts - 1 {
             imageNumber += 1
             mainCollectionView.scrollToItem(at: IndexPath(row: imageNumber, section: 0), at: .left, animated: true)
@@ -49,7 +49,7 @@ final class MainViewController: UIViewController {
         }
     }
     private func scrollCollectionViewBack() {
-        guard let counts = viewModel?.getImagesCount() else { return }
+        guard let counts = viewModel?.getImagesCount(forTag: mainCollectionView.tag) else { return }
         if imageNumber != 0 {
             imageNumber -= 1
             mainCollectionView.scrollToItem(at: IndexPath(row: imageNumber, section: 0), at: .left, animated: true)
@@ -67,10 +67,10 @@ final class MainViewController: UIViewController {
         scrollCollectionViewForward()
     }
 }
-// MARK: - Collection View
+// MARK: - CollectionView
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.getImagesCount() ?? 0
+        viewModel?.getImagesCount(forTag: collectionView.tag) ?? 1
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView.tag {
@@ -82,9 +82,9 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             collectionView.isScrollEnabled = false
             return cell
         default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.Cells.movies.rawValue, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.Cells.main.rawValue, for: indexPath)
             guard let cell = cell as? MainCollectionViewCell else { return UICollectionViewCell() }
-            cell.viewModel = viewModel?.cellViewModel(forIndexPath: indexPath, forTag: collectionView.tag)
+            cell.viewModel = self.viewModel?.cellViewModel(forIndexPath: indexPath, forTag: collectionView.tag)
             cell.layer.cornerRadius = 5
             collectionView.backgroundColor = UIColor(white: 0, alpha: 0)
             return cell
@@ -118,4 +118,3 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
     }
 }
-

@@ -8,8 +8,8 @@
 import UIKit
 
 final class MainCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet private weak var nameTextLabel: UILabel!
+    @IBOutlet  weak var imageView: UIImageView!
+    @IBOutlet  weak var nameTextLabel: UILabel!
     weak var viewModel: CollectionViewCellViewModelType? {
         didSet {
             guard let viewModel = viewModel else { return }

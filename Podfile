@@ -7,4 +7,5 @@ target 'Anime Store' do
 
   # Pods for Anime Store
   pod 'Alamofire', '5.6.2'
+  pod 'SwiftyJSON', '5.0.1'
 end
