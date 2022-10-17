@@ -50,7 +50,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DZ7-X2-pjX">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITG-fY-DdP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITG-fY-DdP">
                                                     <rect key="frame" x="30" y="188" width="58.5" height="30"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Name">
@@ -129,13 +129,14 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-Kd-X0f">
                                                     <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="834-PG-qDP">
-                                                    <rect key="frame" x="42.5" y="10" width="45" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="834-PG-qDP">
+                                                    <rect key="frame" x="42.5" y="10" width="45.5" height="20"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Name">
                                                             <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="17" name="AnimeInept"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -146,7 +147,6 @@
                                                 <constraint firstItem="834-PG-qDP" firstAttribute="top" secondItem="hZE-J2-lW6" secondAttribute="top" constant="10" id="XZK-MA-r3E"/>
                                                 <constraint firstItem="CYQ-Kd-X0f" firstAttribute="leading" secondItem="hZE-J2-lW6" secondAttribute="leading" id="fOW-SE-oF7"/>
                                                 <constraint firstItem="834-PG-qDP" firstAttribute="centerX" secondItem="hZE-J2-lW6" secondAttribute="centerX" id="fcW-KQ-jKF"/>
-                                                <constraint firstItem="834-PG-qDP" firstAttribute="height" secondItem="CYQ-Kd-X0f" secondAttribute="height" multiplier="0.14" id="nsx-YG-isD"/>
                                                 <constraint firstItem="CYQ-Kd-X0f" firstAttribute="top" secondItem="hZE-J2-lW6" secondAttribute="top" id="qLv-eY-N1F"/>
                                                 <constraint firstAttribute="trailing" secondItem="CYQ-Kd-X0f" secondAttribute="trailing" id="sfv-10-2MI"/>
                                                 <constraint firstAttribute="bottom" secondItem="CYQ-Kd-X0f" secondAttribute="bottom" id="tfF-N2-Jft"/>
@@ -184,13 +184,14 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ctW-cZ-fbf">
                                                     <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-5E-lLv">
-                                                    <rect key="frame" x="42.5" y="10" width="45" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irJ-5E-lLv">
+                                                    <rect key="frame" x="42.5" y="10" width="45.5" height="20"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Name">
                                                             <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="17" name="AnimeInept"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -201,7 +202,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="ctW-cZ-fbf" secondAttribute="bottom" id="6qq-xL-odY"/>
                                                 <constraint firstItem="ctW-cZ-fbf" firstAttribute="top" secondItem="gwp-5n-fdS" secondAttribute="top" id="RPJ-xp-zSv"/>
                                                 <constraint firstItem="irJ-5E-lLv" firstAttribute="top" secondItem="gwp-5n-fdS" secondAttribute="top" constant="10" id="TiJ-NN-IRd"/>
-                                                <constraint firstItem="irJ-5E-lLv" firstAttribute="height" secondItem="ctW-cZ-fbf" secondAttribute="height" multiplier="0.14" id="bnz-no-rz9"/>
                                                 <constraint firstItem="irJ-5E-lLv" firstAttribute="centerX" secondItem="gwp-5n-fdS" secondAttribute="centerX" id="ogp-vV-MGc"/>
                                                 <constraint firstAttribute="trailing" secondItem="ctW-cZ-fbf" secondAttribute="trailing" id="tAq-hp-gwi"/>
                                                 <constraint firstItem="ctW-cZ-fbf" firstAttribute="leading" secondItem="gwp-5n-fdS" secondAttribute="leading" id="xPD-N9-yDU"/>
@@ -239,13 +239,14 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-az-oQX">
                                                     <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-bV-o5x">
-                                                    <rect key="frame" x="42.5" y="10" width="45" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-bV-o5x">
+                                                    <rect key="frame" x="42.5" y="10" width="45.5" height="20"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Name">
                                                             <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="17" name="AnimeInept"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -259,7 +260,6 @@
                                                 <constraint firstItem="eDU-bV-o5x" firstAttribute="top" secondItem="N5c-bd-Uy6" secondAttribute="top" constant="10" id="WqF-aV-PXS"/>
                                                 <constraint firstAttribute="trailing" secondItem="f9b-az-oQX" secondAttribute="trailing" id="glz-dQ-3Ea"/>
                                                 <constraint firstItem="f9b-az-oQX" firstAttribute="top" secondItem="N5c-bd-Uy6" secondAttribute="top" id="ora-QM-wQz"/>
-                                                <constraint firstItem="eDU-bV-o5x" firstAttribute="height" secondItem="f9b-az-oQX" secondAttribute="height" multiplier="0.14" id="vfe-kI-RGk"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="130" height="150"/>
@@ -275,7 +275,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slc-3A-UBa">
-                                <rect key="frame" x="10" y="357.5" width="108" height="21"/>
+                                <rect key="frame" x="10" y="357.5" width="107" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Top From Api">
                                         <attributes>

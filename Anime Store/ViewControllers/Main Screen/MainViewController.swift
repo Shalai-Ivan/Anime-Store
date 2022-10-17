@@ -17,7 +17,7 @@ final class MainViewController: UIViewController {
     @IBOutlet private weak var category2Label: UILabel!
     @IBOutlet private weak var category3Label: UILabel!
     private var networkManager = NetworkManager()
-    private var viewModel: CollectionViewViewModelType?
+    private var viewModel: MainViewModel?
     private let AVPLayerModel = AVPlayerModel()
     private var imageNumber: Int = 0
     override func viewDidLoad() {
@@ -28,12 +28,6 @@ final class MainViewController: UIViewController {
     }
     deinit {
         AVPLayerModel.removeVideoPlayerObserver()
-    }
-    private func updateInterface(animeModel: AnimeModel) {
-        DispatchQueue.main.async { [weak self] in
-            self?.category1Label.text = animeModel.title
-            self?.apiCollectionView.reloadData()
-        }
     }
     private func startTimer() {
         let _ = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(scrollCollectionViewForward), userInfo: nil, repeats: true)
@@ -73,21 +67,34 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         viewModel?.getImagesCount(forTag: collectionView.tag) ?? 1
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.Cells.main.rawValue, for: indexPath)
+        guard let cell = cell as? MainCollectionViewCell, let viewModel = viewModel else { return UICollectionViewCell() }
         switch collectionView.tag {
         case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.Cells.main.rawValue, for: indexPath)
-            guard let cell = cell as? MainCollectionViewCell else { return UICollectionViewCell() }
-            cell.viewModel = viewModel?.cellViewModel(forIndexPath: indexPath, forTag: collectionView.tag)
+            let animeName = viewModel.getAnimeName(forIndexPath: indexPath, forTag: collectionView.tag)
+            self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
+                cell.animeModel = animeModels.first
+            }
             collectionView.layer.cornerRadius = 10
             collectionView.isScrollEnabled = false
             return cell
-        default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.Cells.main.rawValue, for: indexPath)
-            guard let cell = cell as? MainCollectionViewCell else { return UICollectionViewCell() }
-            cell.viewModel = self.viewModel?.cellViewModel(forIndexPath: indexPath, forTag: collectionView.tag)
+        case 1:
+            self.networkManager.fetchRequest(typeRequest: .apiTop) { animeModels in
+                cell.animeModel = animeModels[indexPath.row]
+            }
             cell.layer.cornerRadius = 5
             collectionView.backgroundColor = UIColor(white: 0, alpha: 0)
             return cell
+        case 2,3:
+            let animeName = viewModel.getAnimeName(forIndexPath: indexPath, forTag: collectionView.tag)
+            self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
+                cell.animeModel = animeModels.first
+            }
+            cell.layer.cornerRadius = 5
+            collectionView.backgroundColor = UIColor(white: 0, alpha: 0)
+            return cell
+        default:
+            return UICollectionViewCell()
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

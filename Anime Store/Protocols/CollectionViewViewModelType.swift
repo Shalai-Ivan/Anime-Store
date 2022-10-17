@@ -9,5 +9,5 @@ import UIKit
 
 protocol CollectionViewViewModelType {
     func getImagesCount(forTag tag: Int) -> Int
-    func cellViewModel(forIndexPath indexPath: IndexPath, forTag tag: Int) -> CollectionViewCellViewModelType
+    func getAnimeName(forIndexPath indexPath: IndexPath, forTag tag: Int) -> String
 }

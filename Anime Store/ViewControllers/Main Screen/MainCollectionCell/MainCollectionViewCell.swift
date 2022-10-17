@@ -10,11 +10,11 @@ import UIKit
 final class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet  weak var imageView: UIImageView!
     @IBOutlet  weak var nameTextLabel: UILabel!
-    weak var viewModel: CollectionViewCellViewModelType? {
+    var animeModel: AnimeModel? {
         didSet {
-            guard let viewModel = viewModel else { return }
-            imageView.image = viewModel.image
-            nameTextLabel.text = viewModel.text
+            guard let animemModel = animeModel else { return }
+            imageView.image = animemModel.image
+            nameTextLabel.text = animemModel.title
         }
     }
     @IBAction func didTapToLeftButton(_ sender: Any) {

@@ -22,8 +22,6 @@
 		9AA6958328F5742B00180191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA6958228F5742B00180191 /* NetworkManager.swift */; };
 		9AB9286328EB310E00787754 /* logInBackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9AB9286228EB310E00787754 /* logInBackgroundVideo.mp4 */; };
 		9AC8779B28F2D04C0059DAEC /* CollectionViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8779A28F2D04B0059DAEC /* CollectionViewViewModelType.swift */; };
-		9AC8779D28F2D2880059DAEC /* CollectionViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8779C28F2D2880059DAEC /* CollectionViewCellViewModelType.swift */; };
-		9AC8779F28F2D4F30059DAEC /* MainViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8779E28F2D4F30059DAEC /* MainViewModelCell.swift */; };
 		9AC877A428F301170059DAEC /* Anime Inept.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9AC877A328F301170059DAEC /* Anime Inept.otf */; };
 		9AE7D3A328EF3C9C0010E287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7D3A228EF3C9C0010E287 /* Main.storyboard */; };
 		9AE7D3A528EF3CAB0010E287 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */; };
@@ -51,8 +49,6 @@
 		9AA6958228F5742B00180191 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9AB9286228EB310E00787754 /* logInBackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = logInBackgroundVideo.mp4; sourceTree = "<group>"; };
 		9AC8779A28F2D04B0059DAEC /* CollectionViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewViewModelType.swift; sourceTree = "<group>"; };
-		9AC8779C28F2D2880059DAEC /* CollectionViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellViewModelType.swift; sourceTree = "<group>"; };
-		9AC8779E28F2D4F30059DAEC /* MainViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelCell.swift; sourceTree = "<group>"; };
 		9AC877A328F301170059DAEC /* Anime Inept.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anime Inept.otf"; sourceTree = "<group>"; };
 		9AE7D3A228EF3C9C0010E287 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9AE7D3A428EF3CAB0010E287 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				9AC8779A28F2D04B0059DAEC /* CollectionViewViewModelType.swift */,
-				9AC8779C28F2D2880059DAEC /* CollectionViewCellViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -104,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				9A28DC5328F08A7A0097873E /* MainViewModel.swift */,
-				9AC8779E28F2D4F30059DAEC /* MainViewModelCell.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -395,7 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A28DC5428F08A7A0097873E /* MainViewModel.swift in Sources */,
-				9AC8779D28F2D2880059DAEC /* CollectionViewCellViewModelType.swift in Sources */,
 				9A61985B28EB09B60082F7DF /* AppDelegate.swift in Sources */,
 				9A61986528EB09B60082F7DF /* Anime_Store.xcdatamodeld in Sources */,
 				9A10C45828F1A323004DEDED /* MainCollectionViewCell.swift in Sources */,
@@ -406,7 +399,6 @@
 				9A82FECF28EF388C00611D96 /* LogInViewController.swift in Sources */,
 				9A82FEAD28EEBBCE00611D96 /* Identifiers.swift in Sources */,
 				9AA6958328F5742B00180191 /* NetworkManager.swift in Sources */,
-				9AC8779F28F2D4F30059DAEC /* MainViewModelCell.swift in Sources */,
 				9AC8779B28F2D04C0059DAEC /* CollectionViewViewModelType.swift in Sources */,
 				9A3D213828F35FF300358E70 /* AVPlayerModel.swift in Sources */,
 			);
