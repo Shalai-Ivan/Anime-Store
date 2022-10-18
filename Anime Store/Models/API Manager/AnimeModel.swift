@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct AnimeModel {
+class AnimeModel {
     let image: UIImage
     let title: String
     init(image: UIImage, title: String) {

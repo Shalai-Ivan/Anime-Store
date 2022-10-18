@@ -72,23 +72,29 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         switch collectionView.tag {
         case 0:
             let animeName = viewModel.getAnimeName(forIndexPath: indexPath, forTag: collectionView.tag)
-            self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
-                cell.animeModel = animeModels.first
+            DispatchQueue.main.async {
+                self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
+                    cell.animeModel = animeModels.first
+                }
             }
             collectionView.layer.cornerRadius = 10
             collectionView.isScrollEnabled = false
             return cell
         case 1:
-            self.networkManager.fetchRequest(typeRequest: .apiTop) { animeModels in
-                cell.animeModel = animeModels[indexPath.row]
+            DispatchQueue.main.async {
+                self.networkManager.fetchRequest(typeRequest: .apiTop) { animeModels in
+                    cell.animeModel = animeModels[indexPath.row]
+                }
             }
             cell.layer.cornerRadius = 5
             collectionView.backgroundColor = UIColor(white: 0, alpha: 0)
             return cell
         case 2,3:
             let animeName = viewModel.getAnimeName(forIndexPath: indexPath, forTag: collectionView.tag)
-            self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
-                cell.animeModel = animeModels.first
+            DispatchQueue.main.async {
+                self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
+                    cell.animeModel = animeModels.first
+                }
             }
             cell.layer.cornerRadius = 5
             collectionView.backgroundColor = UIColor(white: 0, alpha: 0)

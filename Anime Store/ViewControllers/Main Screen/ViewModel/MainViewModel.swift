@@ -13,9 +13,9 @@ class MainViewModel {
         Array(0...5).compactMap { UIImage(named: "item\($0)") }
     }
     var defaultTitle: String = "Name"
-    let mainViewAnime = ["Kimetsu%20no%20Yaiba", "JoJo’s%20Bizarre%20Adventure", "My%20Dress%20Up%20Darling", "The%20Orbital%20Children", "Ranking%20of%20Kings", "Kaguya-sama:%20Love%20Is%20War%20Ultra%20Romantic", "Rust-Eater%20Bisco", "World’s%20End%20Harem", "Attack%20on%20Titan%20(Final%20Season%20Part%202)", "Spy%20×%20Family"]
-    let topAdminArray = ["Bleach", "Attack%20on%20Titan", "Demon%20Slayer", "Death%20Note", "Naruto"]
-    let topUsersArray = ["Fullmetal%20Alchemist", "Cowboy%20Bebop", "One%20Piece", "Monster", "Hajime%20no%20Ippo", "Mob%20Psycho%20100", "Hunter%20x%20Hunter", "Neon%20Genesis%20Evangelion", "Yuu%20Yuu%20Hakusho", "FLCL"]
+    let mainViewAnime = ["Kimetsu%20no%20Yaiba", "JoJos%20Bizarre%20Adventure", "My%20Dress%20Up%20Darling", "The%20Orbital%20Children", "Ranking%20of%20Kings", "Kaguya-sama:%20Love%20Is%20War%20Ultra%20Romantic", "Rust-Eater%20Bisco", "Worlds%20End%20Harem", "Attack%20on%20Titan%20(Final%20Season%20Part%202)", "Spy%20×%20Family"]
+    let topAdminArray = ["Bleach", "Kimetsu%20no%20Yaiba", "Attack%20on%20Titan", "Death%20Note", "Naruto"]
+    let topUsersArray = ["Fullmetal%20Alchemist", "Cowboy%20Bebop", "One%20Piece", "Monster", "Hajime%20no%20Ippo", "Mob%20Psycho%20100", "Hunter%20x%20Hunter", "Neon%20Genesis%20Evangelion", "Yu%20Yu%20Hakusho", "FLCL"]
 }
 
 extension MainViewModel: CollectionViewViewModelType {
