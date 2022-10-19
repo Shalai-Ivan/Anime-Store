@@ -8,8 +8,13 @@
 import UIKit
 
 final class MainCollectionViewCell: UICollectionViewCell {
-    @IBOutlet  weak var imageView: UIImageView!
-    @IBOutlet  weak var nameTextLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameTextLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
+        didSet {
+            activityIndicator.startAnimating()
+        }
+    }
     var animeModel: AnimeModel? {
         didSet {
             guard let animemModel = animeModel else { return }

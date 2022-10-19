@@ -31,11 +31,12 @@ class NetworkManager {
                         let json = try JSON(data: data)
                         let title = json["data"][0]["title_english"].string ?? "No Name"
                         let imageURL = json["data"][0]["images"]["jpg"]["image_url"].string ?? ""
-                        let image = AnimeModel.downloadImage(stringURL: imageURL)
-                        let animeModel = AnimeModel(image: image, title: title)
-                        animeModels.append(animeModel)
-                        self?.modelsCache.setObject([animeModel], forKey: urlString as NSString)
-                        completionHandler(animeModels)
+                        AnimeModel.downloadImage(stringURL: imageURL) { image in
+                            let animeModel = AnimeModel(image: image, title: title)
+                            animeModels.append(animeModel)
+                            self?.modelsCache.setObject([animeModel], forKey: urlString as NSString)
+                            completionHandler(animeModels)
+                        }
                     } catch let DecodingError.dataCorrupted(context) {
                         print(context)
                     } catch let DecodingError.keyNotFound(key, context) {

@@ -24,15 +24,13 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         viewModel = MainViewModel()
         AVPLayerModel.playBackgroundVideo(forUrl: AVPLayerModel.mainBackgroundVideo, forView: self.view, speed: 0.8)
-        startTimer()
+        scrollCollectionViewForward()
     }
     deinit {
         AVPLayerModel.removeVideoPlayerObserver()
     }
-    private func startTimer() {
-        let _ = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(scrollCollectionViewForward), userInfo: nil, repeats: true)
-    }
     @objc private func scrollCollectionViewForward() {
+        let _ = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(scrollCollectionViewForward), userInfo: nil, repeats: false)
         guard let counts = viewModel?.getImagesCount(forTag: mainCollectionView.tag) else { return }
         if imageNumber < counts - 1 {
             imageNumber += 1
@@ -72,29 +70,26 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         switch collectionView.tag {
         case 0:
             let animeName = viewModel.getAnimeName(forIndexPath: indexPath, forTag: collectionView.tag)
-            DispatchQueue.main.async {
-                self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
-                    cell.animeModel = animeModels.first
-                }
+            self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
+                cell.animeModel = animeModels.first
+                cell.activityIndicator.stopAnimating()
             }
             collectionView.layer.cornerRadius = 10
             collectionView.isScrollEnabled = false
             return cell
         case 1:
-            DispatchQueue.main.async {
-                self.networkManager.fetchRequest(typeRequest: .apiTop) { animeModels in
-                    cell.animeModel = animeModels[indexPath.row]
-                }
+            self.networkManager.fetchRequest(typeRequest: .apiTop) { animeModels in
+                cell.animeModel = animeModels[indexPath.row]
+                cell.activityIndicator.stopAnimating()
             }
             cell.layer.cornerRadius = 5
             collectionView.backgroundColor = UIColor(white: 0, alpha: 0)
             return cell
         case 2,3:
             let animeName = viewModel.getAnimeName(forIndexPath: indexPath, forTag: collectionView.tag)
-            DispatchQueue.main.async {
-                self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
-                    cell.animeModel = animeModels.first
-                }
+            self.networkManager.fetchRequest(typeRequest: .name(name: animeName)) { animeModels in
+                cell.animeModel = animeModels.first
+                cell.activityIndicator.stopAnimating()
             }
             cell.layer.cornerRadius = 5
             collectionView.backgroundColor = UIColor(white: 0, alpha: 0)

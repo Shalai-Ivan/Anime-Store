@@ -63,19 +63,25 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Hxy-an-58h">
+                                                    <rect key="frame" x="197" y="114" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="DZ7-X2-pjX" secondAttribute="bottom" id="1VE-d4-4cw"/>
                                                 <constraint firstItem="DZ7-X2-pjX" firstAttribute="leading" secondItem="qZv-xh-LtM" secondAttribute="leading" id="4Jq-C7-oa9"/>
                                                 <constraint firstItem="ITG-fY-DdP" firstAttribute="leading" secondItem="qZv-xh-LtM" secondAttribute="leading" constant="30" id="9fO-i2-Irg"/>
                                                 <constraint firstItem="ITG-fY-DdP" firstAttribute="height" secondItem="DZ7-X2-pjX" secondAttribute="height" multiplier="0.120968" id="Ldb-Yg-3s5"/>
+                                                <constraint firstItem="Hxy-an-58h" firstAttribute="centerY" secondItem="DZ7-X2-pjX" secondAttribute="centerY" id="Oat-51-pdd"/>
                                                 <constraint firstAttribute="trailing" secondItem="DZ7-X2-pjX" secondAttribute="trailing" id="QdJ-G9-PFm"/>
+                                                <constraint firstItem="Hxy-an-58h" firstAttribute="centerX" secondItem="DZ7-X2-pjX" secondAttribute="centerX" id="ZAJ-bc-Y2X"/>
                                                 <constraint firstAttribute="bottom" secondItem="ITG-fY-DdP" secondAttribute="bottom" constant="30" id="vqN-qK-zxK"/>
                                                 <constraint firstItem="DZ7-X2-pjX" firstAttribute="top" secondItem="qZv-xh-LtM" secondAttribute="top" id="wti-wA-wuW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="248"/>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="Hxy-an-58h" id="Aqc-CX-70b"/>
                                             <outlet property="imageView" destination="DZ7-X2-pjX" id="W2D-4C-g8b"/>
                                             <outlet property="nameTextLabel" destination="ITG-fY-DdP" id="L8r-vT-fWm"/>
                                         </connections>
@@ -142,9 +148,14 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JMd-mC-feR">
+                                                    <rect key="frame" x="55" y="65" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="JMd-mC-feR" firstAttribute="centerX" secondItem="CYQ-Kd-X0f" secondAttribute="centerX" id="9c0-mo-fru"/>
                                                 <constraint firstItem="834-PG-qDP" firstAttribute="top" secondItem="hZE-J2-lW6" secondAttribute="top" constant="10" id="XZK-MA-r3E"/>
+                                                <constraint firstItem="JMd-mC-feR" firstAttribute="centerY" secondItem="CYQ-Kd-X0f" secondAttribute="centerY" id="aSA-K3-9Bg"/>
                                                 <constraint firstItem="CYQ-Kd-X0f" firstAttribute="leading" secondItem="hZE-J2-lW6" secondAttribute="leading" id="fOW-SE-oF7"/>
                                                 <constraint firstItem="834-PG-qDP" firstAttribute="centerX" secondItem="hZE-J2-lW6" secondAttribute="centerX" id="fcW-KQ-jKF"/>
                                                 <constraint firstItem="CYQ-Kd-X0f" firstAttribute="top" secondItem="hZE-J2-lW6" secondAttribute="top" id="qLv-eY-N1F"/>
@@ -154,7 +165,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="130" height="150"/>
                                         <connections>
-                                            <outlet property="imageView" destination="CYQ-Kd-X0f" id="c2Y-50-lKf"/>
+                                            <outlet property="activityIndicator" destination="JMd-mC-feR" id="epU-2T-TQC"/>
+                                            <outlet property="imageView" destination="CYQ-Kd-X0f" id="AYH-Pa-neA"/>
                                             <outlet property="nameTextLabel" destination="834-PG-qDP" id="wmZ-Ny-uUa"/>
                                         </connections>
                                     </collectionViewCell>
@@ -197,11 +209,16 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gqA-bg-8ZE">
+                                                    <rect key="frame" x="55" y="65" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="ctW-cZ-fbf" secondAttribute="bottom" id="6qq-xL-odY"/>
+                                                <constraint firstItem="gqA-bg-8ZE" firstAttribute="centerY" secondItem="ctW-cZ-fbf" secondAttribute="centerY" id="Fzl-2D-2yk"/>
                                                 <constraint firstItem="ctW-cZ-fbf" firstAttribute="top" secondItem="gwp-5n-fdS" secondAttribute="top" id="RPJ-xp-zSv"/>
                                                 <constraint firstItem="irJ-5E-lLv" firstAttribute="top" secondItem="gwp-5n-fdS" secondAttribute="top" constant="10" id="TiJ-NN-IRd"/>
+                                                <constraint firstItem="gqA-bg-8ZE" firstAttribute="centerX" secondItem="ctW-cZ-fbf" secondAttribute="centerX" id="o6y-tj-TkK"/>
                                                 <constraint firstItem="irJ-5E-lLv" firstAttribute="centerX" secondItem="gwp-5n-fdS" secondAttribute="centerX" id="ogp-vV-MGc"/>
                                                 <constraint firstAttribute="trailing" secondItem="ctW-cZ-fbf" secondAttribute="trailing" id="tAq-hp-gwi"/>
                                                 <constraint firstItem="ctW-cZ-fbf" firstAttribute="leading" secondItem="gwp-5n-fdS" secondAttribute="leading" id="xPD-N9-yDU"/>
@@ -209,6 +226,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="130" height="150"/>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="gqA-bg-8ZE" id="psV-9r-yJQ"/>
                                             <outlet property="imageView" destination="ctW-cZ-fbf" id="l3v-j3-dQe"/>
                                             <outlet property="nameTextLabel" destination="irJ-5E-lLv" id="nyY-q5-RZc"/>
                                         </connections>
@@ -252,18 +270,24 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="GcF-Eg-BH7">
+                                                    <rect key="frame" x="55" y="65" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="f9b-az-oQX" secondAttribute="bottom" id="NeI-4p-G3G"/>
                                                 <constraint firstItem="eDU-bV-o5x" firstAttribute="centerX" secondItem="N5c-bd-Uy6" secondAttribute="centerX" id="Rgm-cg-rPN"/>
                                                 <constraint firstItem="f9b-az-oQX" firstAttribute="leading" secondItem="N5c-bd-Uy6" secondAttribute="leading" id="T55-3a-uzX"/>
+                                                <constraint firstItem="GcF-Eg-BH7" firstAttribute="centerY" secondItem="f9b-az-oQX" secondAttribute="centerY" id="TaI-QH-vyo"/>
                                                 <constraint firstItem="eDU-bV-o5x" firstAttribute="top" secondItem="N5c-bd-Uy6" secondAttribute="top" constant="10" id="WqF-aV-PXS"/>
                                                 <constraint firstAttribute="trailing" secondItem="f9b-az-oQX" secondAttribute="trailing" id="glz-dQ-3Ea"/>
                                                 <constraint firstItem="f9b-az-oQX" firstAttribute="top" secondItem="N5c-bd-Uy6" secondAttribute="top" id="ora-QM-wQz"/>
+                                                <constraint firstItem="GcF-Eg-BH7" firstAttribute="centerX" secondItem="f9b-az-oQX" secondAttribute="centerX" id="sDd-rr-rIa"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="130" height="150"/>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="GcF-Eg-BH7" id="6C4-wf-eAf"/>
                                             <outlet property="imageView" destination="f9b-az-oQX" id="nVP-Zq-AIN"/>
                                             <outlet property="nameTextLabel" destination="eDU-bV-o5x" id="Hhf-aa-KFM"/>
                                         </connections>
