@@ -13,25 +13,23 @@ final class MainViewController: UIViewController {
     @IBOutlet private weak var apiCollectionView: UICollectionView!
     @IBOutlet private weak var adminCollectionView: UICollectionView!
     @IBOutlet private weak var usersCollectionView: UICollectionView!
-    @IBOutlet private weak var category1Label: UILabel!
-    @IBOutlet private weak var category2Label: UILabel!
-    @IBOutlet private weak var category3Label: UILabel!
-    private var networkManager = NetworkManager()
-    private var viewModel: MainViewModel?
+    private let networkManager = NetworkManager()
+    private let viewModel = MainViewModel()
     private let AVPLayerModel = AVPlayerModel()
     private var imageNumber: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = MainViewModel()
         AVPLayerModel.playBackgroundVideo(forUrl: AVPLayerModel.mainBackgroundVideo, forView: self.view, speed: 0.8)
-        scrollCollectionViewForward()
+        startTimer()
     }
     deinit {
         AVPLayerModel.removeVideoPlayerObserver()
     }
+    private func startTimer() {
+        let _ = Timer(timeInterval: 10, target: self, selector: #selector(scrollCollectionViewForward), userInfo: nil, repeats: true)
+    }
     @objc private func scrollCollectionViewForward() {
-        let _ = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(scrollCollectionViewForward), userInfo: nil, repeats: false)
-        guard let counts = viewModel?.getImagesCount(forTag: mainCollectionView.tag) else { return }
+        let counts = viewModel.getImagesCount(forTag: mainCollectionView.tag)
         if imageNumber < counts - 1 {
             imageNumber += 1
             mainCollectionView.scrollToItem(at: IndexPath(row: imageNumber, section: 0), at: .left, animated: true)
@@ -41,7 +39,7 @@ final class MainViewController: UIViewController {
         }
     }
     private func scrollCollectionViewBack() {
-        guard let counts = viewModel?.getImagesCount(forTag: mainCollectionView.tag) else { return }
+        let counts = viewModel.getImagesCount(forTag: mainCollectionView.tag)
         if imageNumber != 0 {
             imageNumber -= 1
             mainCollectionView.scrollToItem(at: IndexPath(row: imageNumber, section: 0), at: .left, animated: true)
@@ -62,11 +60,10 @@ final class MainViewController: UIViewController {
 // MARK: - CollectionView
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel?.getImagesCount(forTag: collectionView.tag) ?? 1
+        viewModel.getImagesCount(forTag: collectionView.tag)
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.Cells.main.rawValue, for: indexPath)
-        guard let cell = cell as? MainCollectionViewCell, let viewModel = viewModel else { return UICollectionViewCell() }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.Cells.main.rawValue, for: indexPath) as! MainCollectionViewCell
         switch collectionView.tag {
         case 0:
             let animeName = viewModel.getAnimeName(forIndexPath: indexPath, forTag: collectionView.tag)

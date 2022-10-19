@@ -29,7 +29,7 @@ class NetworkManager {
                     guard let data = response.data else { return }
                     do {
                         let json = try JSON(data: data)
-                        let title = json["data"][0]["title_english"].string ?? "No Name"
+                        let title = json["data"][0]["title_english"].string ?? name.replacingOccurrences(of: "%20", with: " ")
                         let imageURL = json["data"][0]["images"]["jpg"]["image_url"].string ?? ""
                         AnimeModel.downloadImage(stringURL: imageURL) { image in
                             let animeModel = AnimeModel(image: image, title: title)
